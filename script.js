@@ -1,38 +1,34 @@
 //controleren of een getal groot is
-const getal = function (nummer){
+const getalIsGroter = function (getal) {
 if (getal > 100) {
     return "waar";
-}
+} else {
     return "niet waar";
+}
 };
-const result = getal (20);
-console.log(result);
 
-
+console.log(getalIsGroter(110));
+console.log(getalIsGroter(40));
+console.log(getalIsGroter(1000));
 
 //uitmijter bij een club
-const myAge = 20;
-const totalAmount = 95;
-   const sum = totalAmount + 1;
+const uitsmijterReactie = function(maxBezoekersAantal, huidigeBezoekersAantal, leeftijdBezoeker){
 
-if (myAge >= 18) {
-    console.log("kom binnen");
-} else {
-    console.log("dit is een club voor volwassenen");
-}
-
-if (sum>100) {
-    console.log("het is nu te druk, kom later terug");
-} else {
-    console.log("kom binnen");
+if (leeftijdBezoeker < 18) return "dit is een club voor volwassenen";
+if (huidigeBezoekersAantal >= maxBezoekersAantal) return "het is nu te druk, kom later terug";
+return "kom binnen";
 };
 
+console.log(uitsmijterReactie(100, 85, 17));
+console.log(uitsmijterReactie(100, 115, 20));
+console.log(uitsmijterReactie(100, 85, 20));
+
 // het gemiddelde berekenen
-const add = function(number1, number2, number3, number4, number5){
+const berekenGemiddelde = function(number1, number2, number3, number4, number5){
     const sum = number1 + number2 + number3 + number4 + number5;
     const average = sum / 5;
     return average;
     };
 
-    const result2 = add(2, 6, 4, 3, 5);
-    console.log(result2);
+    console.log(berekenGemiddelde(2, 6, 4, 3, 5));
+    console.log(berekenGemiddelde(12, 16, 14, 3, 5));
